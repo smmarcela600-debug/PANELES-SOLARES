@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generación Solar en Colombia</title>
+    <link href="estilos.css" rel="stylesheet"/>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; display: flex; flex-direction: column; align-items: center; padding: 20px; background: #f0f2f5; color: #333; }
+        
+        
+
+        /* Contenedores de Gráficos */
+        .dashboard { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; width: 100%; max-width: 1000px; margin-bottom: 40px; }
+        .chart-card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); flex: 1; min-width: 300px; }
+        .full-width { flex: 1 1 100%; }
+
+        /* Tabla y Controles */
+        .controles { margin: 20px 0; }
+        button { padding: 10px 20px; cursor: pointer; background: #f39c12; border: none; color: white; border-radius: 5px; font-weight: bold; transition: 0.3s; }
+        button:hover { background: #d68910; }
+        
+        table { border-collapse: collapse; width: 90%; max-width: 1000px; background: white; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-top: 10px; }
+        th, td { padding: 12px; border: 1px solid #ddd; text-align: center; }
+        th { background: #2c3e50; color: white; }
+        tr:nth-child(even) { background-color: #f9f9f9; }
+    </style>
+</head>
+<body>
+
+    <ul>
+        <li><a href="index.html">Historia</a></li>
+        <li><a href="Aplicaciones.html">Aplicaciones</a></li>
+        <li><a href="TiposDePaneles.html">Tipos de Paneles</a></li>
+        <li><a href="Graficos.html">Gráficos</a></li>
+        <li><a href="Contacto.html">Contacto</a></li>
+    </ul>
+
+    <h2>☀ Tablero de Energía Solar Colombia</h2>
+
+    <div class="dashboard">
+        <div class="chart-card">
+            <canvas id="barrasApiladas"></canvas>
+        </div>
+        <div class="chart-card">
+            <canvas id="tortaRegiones"></canvas>
+        </div>
+        <div class="chart-card full-width">
+            <canvas id="historicoSolar"></canvas>
+        </div>
+    </div>
+
+    <h3>Registro de Datos Históricos</h3>
+    <div class="controles">
+        <button onclick="ordenarPorGeneracion()">Ordenar por Generación (Menor a Mayor)</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>País</th>
+                <th>Código</th>
+                <th>Año</th>
+                <th>Generación (TWh)</th>
+            </tr>
+        </thead>
+        <tbody id="tabla-cuerpo"></tbody>
+    </table>
+
+    <script>
+        // --- DATA DE LA TABLA---
+        let datosSolar = [
+            { pais: "Colombia", code: "COL", year: 2000, gen: 1835.014 },
+            { pais: "Colombia", code: "COL", year: 2001, gen: 266.875 },
+            { pais: "Colombia", code: "COL", year: 2002, gen: 465.125 },
+            { pais: "Colombia", code: "COL", year: 2003, gen: 6.405 },
+            { pais: "Colombia", code: "COL", year: 2004, gen: 7951.726 },
+            { pais: "Colombia", code: "COL", year: 2005, gen: 953.125 },
+            { pais: "Colombia", code: "COL", year: 2017, gen: 5.000 },
+            { pais: "Colombia", code: "COL", year: 2018, gen: 12.000 },
+            { pais: "Colombia", code: "COL", year: 2019, gen: 13.206 },
+            { pais: "Colombia", code: "COL", year: 2020, gen: 1908.000 },
+            { pais: "Colombia", code: "COL", year: 2021, gen: 31732.163 }
+        ];
+
+        function cargarTabla(data) {
+            const cuerpo = document.getElementById('tabla-cuerpo');
+            cuerpo.innerHTML = "";
+            data.forEach(item => {
+                cuerpo.innerHTML += `
+                    <tr>
+                        <td>${item.pais}</td>
+                        <td>${item.code}</td>
+                        <td>${item.year}</td>
+                        <td>${item.gen.toLocaleString()}</td>
+                    </tr>`;
+            });
+        }
+
+        function ordenarPorGeneracion() {
+            datosSolar.sort((a, b) => a.gen - b.gen);
+            cargarTabla(datosSolar);
+        }
+
+        // Inicializar tabla
+        cargarTabla(datosSolar);
+
+        // --- CONFIGURACIÓN DE GRÁFICOS ---
+
+        // 1. Gráfico de Barras (Capacidad MW)
+        new Chart(document.getElementById('barrasApiladas'), {
+            type: 'bar',
+            data: {
+                labels: ['2021', '2022', '2023', '2024', '2025 (E)'],
+                datasets: [
+                    { label: 'Solar Gran Escala (MW)', data: [107, 420, 810, 1150, 1600], backgroundColor: '#FFD700' },
+                    { label: 'Autogeneración (MW)', data: [35, 95, 180, 290, 410], backgroundColor: '#457b9d' }
+                ]
+            },
+            options: { 
+                plugins: { title: { display: true, text: 'Capacidad Instalada (MW)' } },
+                scales: { x: { stacked: true }, y: { stacked: true } }
+            }
+        });
+
+        // 2. Gráfico de Torta (Regiones)
+        new Chart(document.getElementById('tortaRegiones'), {
+            type: 'pie',
+            data: {
+                labels: ['Cundinamarca', 'Antioquia', 'Valle', 'Costa Caribe', 'Otros'],
+                datasets: [{
+                    data: [45, 30, 15, 7, 3],
+                    backgroundColor: ['#1d3557', '#457b9d', '#a8dadc', '#FFD700', '#f1faee']
+                }]
+            },
+            options: { 
+                plugins: { title: { display: true, text: 'Electrolineras por Región' } }
+            }
+        });
+
+        // 3. Gráfico Histórico (TWh)
+        new Chart(document.getElementById('historicoSolar'), {
+            type: 'line',
+            data: {
+                labels: datosSolar.map(d => d.year),
+                datasets: [{
+                    label: 'Generación (TWh)',
+                    data: datosSolar.map(d => d.gen),
+                    borderColor: '#e63946',
+                    backgroundColor: 'rgba(230, 57, 70, 0.1)',
+                    fill: true,
+                    tension: 0.3
+                }]
+            },
+            options: {
+                plugins: { title: { display: true, text: 'Tendencia Histórica de Generación (TWh)' } }
+            }
+        });
+    </script>
+</body>
+</html>

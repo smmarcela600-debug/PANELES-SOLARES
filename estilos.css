@@ -1,0 +1,273 @@
+#titulo{
+    color: #1d3557;
+    text-align: center;
+}
+
+
+/* --- NAVEGACIÓN COMPACTA --- */
+ul { 
+    list-style: none; 
+    padding: 0; 
+    margin: 20px auto; /* El 'auto' la centra horizontalmente */
+    display: inline-flex; /* CLAVE: Ajusta el ancho total solo al contenido */
+    background: #2c3e50; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Sombra suave para profundidad */
+    overflow: hidden;
+}
+
+ul li { 
+    margin: 0; 
+    display: flex;
+}
+
+ul li a { 
+    display: block;
+    color: white; 
+    text-decoration: none; 
+    font-weight: bold; 
+    padding: 12px 20px; /* Espaciado interno equilibrado */
+    text-align: center;
+    transition: all 0.3s ease;
+    border-right: 1px solid rgba(255,255,255,0.1); /* Separador entre botones */
+}
+
+/* Quitar el borde al último elemento */
+ul li:last-child a {
+    border-right: none;
+}
+
+ul li a:hover { 
+    background: #f39c12; 
+    color: #2c3e50; 
+}
+
+/* Centrar el contenedor del ul en el body */
+body {
+    text-align: center; /* Centrar */
+}
+p {
+    /* Divide el párrafo en 2 columnas */
+    column-count: 2;
+
+    /* Espacio de separación entre las columnas */
+    column-gap: 40px;
+
+    /* Una línea divisoria suave entre columnas */
+    column-rule: 1px solid #ccc;
+
+    /* Justifica el texto para que se vea más profesional */
+    text-align: justify;
+
+    line-height: 1.6;
+    margin: 20px;
+}
+/* Definición de la clase */
+.Titulos2 {
+    text-align: center;
+    /* Centra el texto */
+    color: #457b9d;
+    /* Cambia el color (usando el azul de tu menú) */
+    font-family: Arial, sans-serif;
+    text-transform: uppercase;
+    /* Pone el título en mayúsculas */
+    margin-top: 20px;
+}
+.contenedor-imagenes {
+    display: flex;
+    /* Alinea las imágenes una al lado de la otra */
+    gap: 20px;
+    /* Añade un espacio de separación entre ellas */
+    width: 100%;
+    /* Ocupa todo el ancho de la página */
+    padding: 10px;
+}
+
+.contenedor-imagenes img {
+    flex: 1;
+    /* Obliga a ambas a medir exactamente lo mismo */
+    width: 100%;
+    /* Se ajustan al espacio asignado por flex */
+    height: 300px;
+    /* Forzamos una altura fija para que sean iguales */
+    object-fit: cover;
+    /* Corta la imagen para que no se deforme */
+    border-radius: 8px;
+    /* Opcional: estética */
+}
+
+
+.social-bar {
+    position: fixed;
+    right: 20px;
+    /* Distancia desde la derecha */
+    top: 50%;
+    /* Centrado verticalmente */
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* Espacio entre botones */
+    z-index: 9999;
+    /* Siempre por encima de todo */
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 12px;
+    /* Bordes redondeados como en la imagen */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.icon img {
+    width: 30px;
+    /* Tamaño del icono interno */
+    height: 30px;
+}
+
+/* Efecto al pasar el mouse */
+.icon:hover {
+    transform: scale(1.1);
+    background-color: #f0f0f0;
+}
+
+
+    
+/*Codigo Para Estrellas de Calificacion*/
+.rating-container {
+    
+    text-align: left;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    /* Un poco más ancho para que respire */
+    margin: 20px 0;
+    /* Margen de 0 a los lados para que pegue a la izquierda */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    
+    /* ESTA ES LA CLAVE: Empuja las estrellas a la izquierda */
+    font-size: 2.5em;
+    padding: 10px 0;
+}
+
+
+.star-rating input {
+    display: none;
+}
+
+.star-rating label {
+    color: #ddd;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    padding-right: 5px;
+    /* Un pequeño espacio entre estrellas */
+}
+
+.star-rating input:checked~label,
+.star-rating label:hover,
+.star-rating label:hover~label {
+    color: #f5b301;
+}
+
+.btn-enviar {
+    display: block;
+    /* Para que ocupe su propia línea abajo */
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #457b9d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/*Codigo para configurar tabla paguina Graficos*/
+.container{
+    body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f9;
+        }
+    
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+    
+        th {
+            background-color: #0056b3;
+            color: white;
+        }
+    
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+    
+        h2 {
+            color: #333;
+            text-align: center;
+        }
+}
+
+
+
+
+/* 1. Alineamos el cuerpo a la izquierda */
+body.pagina-contacto {
+    text-align: left;
+}
+
+/* 2. Alineamos los títulos específicos de esta página */
+.pagina-contacto #titulo, 
+.pagina-contacto h1, 
+.pagina-contacto h3 {
+    text-align: left;
+    margin-left: 0;
+}
+
+/*Justificar a la izquierda */
+.pagina-contacto form {
+    text-align: left;
+}
+
+.pagina-contacto fieldset {
+    margin-left: 0;
+    text-align: left;
+}
+
+.pagina-contacto .rating-container {
+    margin-left: 0;
+    text-align: left;
+}
+
+/*Caja de estrellas a la izquierda */
+.pagina-contacto .star-rating {
+    justify-content: flex-end;  
+}

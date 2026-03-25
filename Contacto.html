@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link href="estilos.css" rel="stylesheet"/>
+</head>
+<body >
+    <ul>
+        <li><a href="index.html">Historia</a></li>
+        <li><a href="Aplicaciones.html">Aplicaciones</a></li>
+        <li><a href="TiposDePaneles.html">Tipos de Paneles</a></li>
+        <li><a href="Graficos.html">Graficos</a></li>
+        <li><a href="Calculadora.html">Calculadora</a></li>
+        <li><a href="Contacto.html">Contacto</a></li>
+    </ul>
+    
+
+    <div class="social-bar">
+        <a href="https://wa.me/3208570996" class="icon icon-whatsapp" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/3670/3670051.png" alt="WhatsApp">
+        </a>
+        <a href="https://instagram.com/https://www.instagram.com/solar__mas/" class="icon icon-instagram" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+        </a>
+        <a href="mailto:smmarcela600@ejemplo.com" class="icon icon-email">
+            <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Correo">
+        </a>
+    </div>
+
+    <h1>Encuesta de satisfacción página Web</h1>
+
+    <form action="mi_servidor">
+        <fieldset>
+            <legend>Datos Profesor:</legend>
+
+            <label for="idProfesor">Id Profesor:</label><br/>
+            <input type="text" id="idProfesor" name="idProfesor"/><br/>
+
+            <input type="hidden" id="sistema" name="sistema" value="SAP"/>
+
+            <label for="nombre">Nombre:</label><br/>
+            <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required/><br/>
+
+            <label for="apellido">Apellido:</label><br/>
+            <input type="text" id="apellido" name="apellido" placeholder="Escribe tu apellido" required/><br/>
+
+            <label for="email">Email:</label><br/>
+            <input type="email" id="email" name="email"/><br/> 
+
+            <label for="edad">Edad:</label><br/>
+            <input type="number" id="edad" name="edad"/><br/>
+
+            <label>Género</label><br/>
+            <input type="radio" id="femenino" name="genero" value="femenino"/>
+            <label for="femenino">Femenino</label><br/>
+            <input type="radio" id="masculino" name="genero" value="masculino"/>
+            <label for="masculino">Masculino</label><br/>     
+            
+            <div class="rating-container">
+                <h3>Califica nuestro servicio</h3>
+                <div class="star-rating">
+                    <input type="radio" id="star5" name="rating" value="5">
+                    <label for="star5" title="5 estrellas">★</label>
+                    <input type="radio" id="star4" name="rating" value="4">
+                    <label for="star4" title="4 estrellas">★</label>
+                    <input type="radio" id="star3" name="rating" value="3">
+                    <label for="star3" title="3 estrellas">★</label>
+                    <input type="radio" id="star2" name="rating" value="2">
+                    <label for="star2" title="2 estrellas">★</label>
+                    <input type="radio" id="star1" name="rating" value="1">
+                    <label for="star1" title="1 estrella">★</label>
+                </div>
+            </div>
+
+            <label for="comentario">Comentario:</label><br/>
+            <textarea id="comentario" name="comentario" rows="2" cols="30">Este es mi comentario</textarea><br/>
+
+            <br/>
+            <input type="submit" value="Enviar"/>
+            <input type="submit" formnovalidate value="Enviar sin validar"/>
+            <input type="reset" value="Restablecer"/>
+        </fieldset>    
+    </form>
+</body>
+</html>
