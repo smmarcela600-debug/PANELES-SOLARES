@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Energía Solar | Capturando la luz, construyendo futuro</title>
+    <!-- Google Charts para gráficos interactivos -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Estilos externos -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <div class="nav-container">
+        <div class="logo">
+            <h1><i class="fas fa-solar-panel"></i> Energía Solar</h1>
+            <p class="logo-subtitle">Capturando la luz, construyendo futuro</p>
+        </div>
+        <div class="nav-links">
+            <a href="#inicio"><i class="fas fa-home"></i> Inicio</a>
+            <a href="#objetivos"><i class="fas fa-bullseye"></i> Objetivos</a>
+            <a href="#estadisticas"><i class="fas fa-chart-line"></i> Estadísticas</a>
+            <a href="#equipo"><i class="fas fa-users"></i> Equipo</a>
+            <a href="#metodologia"><i class="fas fa-tasks"></i> Metodología</a>
+            <a href="#contacto"><i class="fas fa-envelope"></i> Contacto</a>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <!-- SECCIÓN INICIO -->
+    <section id="inicio" class="section hero-section">
+        <div class="hero-content">
+            <h2><i class="fas fa-sun"></i> Energía Solar en Colombia</h2>
+            <p class="hero-text">La energía solar se ha consolidado como una de las alternativas más prometedoras dentro del campo de las energías renovables, al aprovechar la radiación del sol para generar electricidad y calor de manera limpia y sostenible. Este recurso, abundante y accesible, representa una oportunidad significativa para reducir la dependencia de combustibles fósiles y mitigar los efectos del cambio climático.</p>
+            <div class="stats-grid">
+                <div class="stat-card"><i class="fas fa-chart-simple"></i> <h3>+1.2 GW</h3><p>Capacidad solar 2025</p></div>
+                <div class="stat-card"><i class="fas fa-bolt"></i> <h3>18%</h3><p>Participación FNCER 2026</p></div>
+                <div class="stat-card"><i class="fas fa-tree"></i> <h3>2.3M tCO₂</h3><p>Emisiones evitadas</p></div>
+            </div>
+            <div class="btn-group">
+                <a href="#estadisticas" class="btn-ancla btn-primary"><i class="fas fa-chart-simple"></i> Ver estadísticas</a>
+                <a href="#contacto" class="btn-ancla btn-secondary"><i class="fas fa-headset"></i> Contáctanos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- OBJETIVOS ESPECÍFICOS -->
+    <section id="objetivos" class="section">
+        <h2><i class="fas fa-bullseye"></i> Objetivos Específicos</h2>
+        <div class="objetivos-grid">
+            <div class="objetivo-card">
+                <i class="fas fa-chalkboard-user"></i>
+                <h3>Educativo</h3>
+                <p>Diseñar y estructurar un sitio web educativo que permita al usuario comprender de manera clara y práctica los principios de la energía solar y su aplicación en la vida cotidiana.</p>
+            </div>
+            <div class="objetivo-card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Visualización de datos</h3>
+                <p>Integrar herramientas de visualización de datos, como gráficos interactivos, que faciliten el análisis de la producción, consumo y beneficios de la energía solar.</p>
+            </div>
+            <div class="objetivo-card">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Usabilidad</h3>
+                <p>Garantizar la usabilidad del sitio web, mediante la implementación de menús intuitivos, filtros y navegación responsiva en distintos dispositivos.</p>
+            </div>
+            <div class="objetivo-card">
+                <i class="fas fa-comment-dots"></i>
+                <h3>Retroalimentación</h3>
+                <p>Establecer un sistema de retroalimentación que permita a los usuarios aportar sugerencias, reportar errores y solicitar nuevas funcionalidades.</p>
+            </div>
+            <div class="objetivo-card">
+                <i class="fas fa-palette"></i>
+                <h3>Diseño responsivo</h3>
+                <p>Implementar un diseño responsivo y atractivo, adaptado a diferentes pantallas, combinando estética visual con accesibilidad y funcionalidad.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ALCANCE DEL PROYECTO -->
+    <section id="alcance" class="section">
+        <h2><i class="fas fa-chart-simple"></i> Alcance del Proyecto</h2>
+        <div class="alcance-content">
+            <p>El desarrollo del proyecto de energía solar contempla la creación de una página web educativa que permita a los usuarios comprender de manera clara y práctica los fundamentos de la energía fotovoltaica y sus aplicaciones en la vida cotidiana.</p>
+            <p>Para lograrlo, se integrarán actividades de diseño y programación que incluyan el uso de HTML y CSS para la construcción de páginas estáticas, así como la incorporación de frameworks y librerías interactivas que faciliten la visualización de datos relacionados con la producción y el consumo de energía solar.</p>
+            <p>El alcance también abarca la implementación de funcionalidades de usabilidad, como menús intuitivos, filtros de información y un sistema de retroalimentación que permita a los usuarios aportar sugerencias y reportar errores.</p>
+            <div class="highlight-box">
+                <i class="fas fa-leaf"></i>
+                <strong>Meta final:</strong> Fomentar la conciencia ambiental y destacar los beneficios de la energía solar como alternativa sostenible frente a las fuentes tradicionales de energía.
+            </div>
+        </div>
+    </section>
+
+    <!-- ESTADÍSTICAS Y GRÁFICOS -->
+    <section id="estadisticas" class="section">
+        <h2><i class="fas fa-chart-line"></i> Estadísticas & Proyecciones</h2>
+        <div class="visitor-counter" id="visitorCounterDisplay">
+            <i class="fas fa-eye"></i> Visitantes en línea hoy: <span id="visitorCount">0</span>
+        </div>
+        <p>Datos actualizados del sector eléctrico colombiano (XM, UPME, Andesco). La energía solar fotovoltaica creció un 37% anual en los últimos 2 años.</p>
+        
+        <div class="grafico-wrapper">
+            <h3><i class="fas fa-chart-bar"></i> Capacidad Solar Instalada (MW) por región</h3>
+            <div id="chart_bar_div" style="height: 380px; width: 100%;"></div>
+        </div>
+        
+        <div id="donutchart" style="height: 320px; width: 100%; margin-top: 20px;"></div>
+        
+        <div class="grafico-wrapper">
+            <h3><i class="fas fa-chart-pie"></i> Distribución de FNCER en Colombia</h3>
+            <div id="piechart" style="height: 360px; width: 100%;"></div>
+        </div>
+        
+        <p style="font-size:0.85rem; margin-top: 12px;">*Datos basados en informes 2024-2025 y proyecciones del Plan Energético Nacional.</p>
+    </section>
+
+    <!-- EQUIPO DE TRABAJO -->
+    <section id="equipo" class="section">
+        <h2><i class="fas fa-users"></i> Equipo de Trabajo</h2>
+        <div class="team-grid">
+            <div class="team-card">
+                <i class="fas fa-user-graduate"></i>
+                <h3>Yeison Steven Suárez Patiño</h3>
+                <p class="team-role">Organizador del documento entregable</p>
+                <p>Encargado de la redacción, estructura y formato del informe, trabajando en conjunto con el equipo.</p>
+            </div>
+            <div class="team-card">
+                <i class="fas fa-user-graduate"></i>
+                <h3>Isidro Beltrán Rodriguez</h3>
+                <p class="team-role">Organizador de la página web</p>
+                <p>Lideró la creación, estructura y funcionalidad del sitio web, implementando las tecnologías frontend.</p>
+            </div>
+            <div class="team-card">
+                <i class="fas fa-user-graduate"></i>
+                <h3>Yuri Marcela Santana Montaño</h3>
+                <p class="team-role">Organizadora del proyecto</p>
+                <p>Coordinó el desarrollo general, supervisó avances y apoyó en el diseño de la página web y la documentación.</p>
+            </div>
+        </div>
+        
+        <div class="mentores-section">
+            <h3><i class="fas fa-chalkboard"></i> Talentos Tech - Mentores</h3>
+            <div class="mentores-grid">
+                <div class="mentor-card"><i class="fas fa-user-tie"></i> Cesar Augusto Uribe</div>
+                <div class="mentor-card"><i class="fas fa-user-tie"></i> Luisa Fernanda Montoya</div>
+                <div class="mentor-card"><i class="fas fa-user-tie"></i> Wilmar Cardona Rodriguez</div>
+            </div>
+        </div>
+        
+        <div class="instituciones">
+            <p><i class="fas fa-university"></i> Universidad de Caldas | Universidad de Antioquia | Talento Tech 2026</p>
+        </div>
+    </section>
+
+    <!-- METODOLOGÍA SCRUM -->
+    <section id="metodologia" class="section">
+        <h2><i class="fas fa-tasks"></i> Metodología Ágil - Scrum</h2>
+        <p>La planificación del proyecto se fundamenta en la metodología ágil Scrum, organizando el trabajo en fases cortas llamadas sprints. Cada sprint tiene objetivos definidos y entregables claros.</p>
+        
+        <div class="sprints-container">
+            <h3><i class="fas fa-calendar-alt"></i> Sprints del Proyecto</h3>
+            <div class="sprints-grid">
+                <div class="sprint-card"><span class="sprint-num">Sprint 0</span> Inicio y preparación</div>
+                <div class="sprint-card"><span class="sprint-num">Sprint 1</span> Creación de mockups y prototipos</div>
+                <div class="sprint-card"><span class="sprint-num">Sprint 2</span> Diseño inicial y navegación básica</div>
+                <div class="sprint-card"><span class="sprint-num">Sprint 3</span> Implementación del formulario</div>
+                <div class="sprint-card"><span class="sprint-num">Sprint 4</span> Gráficos de producción y consumo</div>
+                <div class="sprint-card"><span class="sprint-num">Sprint 5</span> Pruebas y optimización</div>
+                <div class="sprint-card"><span class="sprint-num">Sprint 6</span> Documentación del proyecto</div>
+                <div class="sprint-card"><span class="sprint-num">Sprint 7</span> Implementación final y presentación</div>
+            </div>
+        </div>
+        
+        <div class="tools-section">
+            <h3><i class="fas fa-tools"></i> Herramientas Utilizadas</h3>
+            <div class="tools-grid">
+                <div class="tool-item"><i class="fab fa-whatsapp"></i> WhatsApp</div>
+                <div class="tool-item"><i class="fab fa-google-drive"></i> Google Drive</div>
+                <div class="tool-item"><i class="fab fa-github"></i> GitHub</div>
+                <div class="tool-item"><i class="fas fa-code"></i> Visual Studio Code</div>
+                <div class="tool-item"><i class="fab fa-html5"></i> HTML5</div>
+                <div class="tool-item"><i class="fab fa-css3-alt"></i> CSS3</div>
+                <div class="tool-item"><i class="fab fa-js"></i> JavaScript</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESULTADOS Y CONCLUSIONES -->
+    <section id="resultados" class="section">
+        <h2><i class="fas fa-chart-line"></i> Resultados Obtenidos</h2>
+        <div class="resultados-content">
+            <p>El proyecto logró cumplir con los objetivos planteados desde el inicio, consolidando tanto la página web como la documentación final.</p>
+            <ul class="resultados-list">
+                <li><i class="fas fa-check-circle"></i> Sitio educativo sobre energía solar, diseñado con criterios de claridad, accesibilidad y atractivo visual.</li>
+                <li><i class="fas fa-check-circle"></i> Uso de tecnologías HTML, CSS y JavaScript para crear un espacio interactivo.</li>
+                <li><i class="fas fa-check-circle"></i> Informe completo y coherente que recoge todo el proceso de desarrollo.</li>
+                <li><i class="fas fa-check-circle"></i> Trabajo en equipo sólido con comunicación constante y compromiso individual.</li>
+            </ul>
+        </div>
+        
+        <div class="conclusiones">
+            <h3><i class="fas fa-lightbulb"></i> Conclusiones</h3>
+            <p>El desarrollo del proyecto permitió evidenciar la importancia del trabajo colaborativo y la distribución clara de responsabilidades. Cada integrante aportó desde sus fortalezas, logrando un producto final coherente y funcional.</p>
+        </div>
+        
+        <div class="lecciones">
+            <h3><i class="fas fa-book-open"></i> Lecciones Aprendidas</h3>
+            <p>La planificación por fases mediante metodología ágil facilitó la coordinación. La comunicación constante y la distribución clara de roles fueron fundamentales para alcanzar los objetivos.</p>
+        </div>
+    </section>
+
+    <!-- FORMULARIO DE CONTACTO Y RETROALIMENTACIÓN -->
+    <section id="contacto" class="section">
+        <h2><i class="fas fa-id-card"></i> Formulario de Contacto y Retroalimentación</h2>
+        <p>¿Interesado en paneles solares? ¿Tienes sugerencias para mejorar nuestro sitio? Escríbenos y te asesoramos sin costo.</p>
+        <form class="form-contacto" id="contactForm">
+            <input type="text" id="nombre" placeholder="Nombre completo" required>
+            <input type="email" id="email" placeholder="Correo electrónico" required>
+            <input type="tel" id="telefono" placeholder="Teléfono / WhatsApp">
+            <select id="tipoConsulta">
+                <option value="consulta">Consulta sobre energía solar</option>
+                <option value="sugerencia">Sugerencia para el sitio</option>
+                <option value="error">Reportar error</option>
+                <option value="otro">Otro</option>
+            </select>
+            <textarea rows="4" id="mensaje" placeholder="Cuéntanos tu proyecto, consulta o sugerencia sobre energía solar en Colombia..."></textarea>
+            <button type="submit" id="sendContactBtn"><i class="fas fa-paper-plane"></i> Enviar mensaje</button>
+            <p id="formFeedback"></p>
+        </form>
+    </section>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <p><i class="fas fa-solar-panel"></i> Energía Solar: Capturando la luz, construyendo futuro</p>
+        <p>Proyecto desarrollado por: Yeison Steven Suárez Patiño, Isidro Beltrán Rodriguez, Yuri Marcela Santana Montaño</p>
+        <p>Universidad de Caldas | Universidad de Antioquia | Talento Tech 2026</p>
+        <p class="footer-refs">Referencias: MDN Web Docs, GitHub, Google Drive, Visual Studio Code</p>
+    </div>
+</footer>
+
+<!-- CHAT VISITANTE EN LÍNEA -->
+<div class="chat-widget" id="chatWidget">
+    <div class="chat-header" id="chatHeader">
+        <span><i class="fas fa-comments"></i> Chat en línea - Asesor Solar</span>
+        <i class="fas fa-chevron-down" id="chatToggleIcon"></i>
+    </div>
+    <div class="chat-body" id="chatBody">
+        <div class="chat-messages" id="chatMessages">
+            <div><strong>🌞 Asesor:</strong> ¡Hola! Soy el asistente virtual del proyecto Energía Solar. ¿En qué puedo ayudarte?</div>
+        </div>
+        <div class="chat-input-area">
+            <input type="text" id="chatInput" placeholder="Escribe tu mensaje...">
+            <button id="sendChatBtn"><i class="fas fa-location-arrow"></i></button>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
